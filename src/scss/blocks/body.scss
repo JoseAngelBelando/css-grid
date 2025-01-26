@@ -1,7 +1,21 @@
+@use '../mixins/responsive.scss' as *;
+
 html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #111;
-  font-family: sans-serif;
+  font-family: 'Inter', serif;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  max-width: 1440px;
+  margin-inline: auto;
+
+  @include responsive(tablet) {
+    font-size: 24px;
+  }
+
+  @include responsive(desktop) {
+    font-size: 32px;
+  }
 }
